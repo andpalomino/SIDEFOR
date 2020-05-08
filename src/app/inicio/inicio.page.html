@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title><p align= "center">Bienvenido</p></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-divider class="ligero">
+    <ion-col width-50>
+      <ion-label>
+        <b>Favoritos</b>
+      </ion-label>
+    </ion-col>
+  </ion-item-divider>
+  
+  <ion-list>
+      <ion-item *ngFor = "let campos of registros" (click)="openArbol(campos.favArbolId)">
+        <ion-avatar slot="start">
+          <ion-img [src]="campos.imagenFoto"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2><b>{{campos.favArbolId}}</b></h2>
+          <h3><i> {{campos.favUserId}}</i></h3>
+          <p>Ver descripción</p>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+
+</ion-content>
