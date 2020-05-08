@@ -11,6 +11,7 @@ export class DescripcionPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

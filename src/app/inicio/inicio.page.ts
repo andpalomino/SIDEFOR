@@ -3,6 +3,22 @@ import { FavoritosService, campos } from '../servicios/favoritos.service';
 import { Router } from "@angular/router";
 
 
+export class arbol{
+arbolID:string;
+
+  constructor() {
+      this.arbolID = ;
+  }
+
+  getMyValue() {
+      return this.myValue;
+  }
+
+  incrementMyValue(){
+      this.myValue++;
+ }
+} 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -21,7 +37,7 @@ export class InicioPage implements OnInit {
     })
   }
 
-  openArbol(arbol:string){
+  openArbol(seleccion:string){
     this.router.navigate(['/descripcion', arbol]);
   }
 
