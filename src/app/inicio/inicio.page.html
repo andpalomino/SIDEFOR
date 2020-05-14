@@ -14,7 +14,7 @@
   </ion-item-divider>
   
   <ion-list>
-      <ion-item *ngFor = "let campos of registros" (click)="openArbol(campos.favArbolId)">
+      <ion-item *ngFor = "let campos of registros">
         <ion-avatar slot="start">
           <ion-img [src]="campos.imagenFoto"></ion-img>
         </ion-avatar>

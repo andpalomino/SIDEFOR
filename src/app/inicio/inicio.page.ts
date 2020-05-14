@@ -1,23 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FavoritosService, campos } from '../servicios/favoritos.service';
-import { Router } from "@angular/router";
-
-
-export class arbol{
-arbolID:string;
-
-  constructor() {
-      this.arbolID = ;
-  }
-
-  getMyValue() {
-      return this.myValue;
-  }
-
-  incrementMyValue(){
-      this.myValue++;
- }
-} 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -32,13 +15,8 @@ export class InicioPage implements OnInit {
 
   ngOnInit() {
     this.favoritoservice.getFavoritos().subscribe(favoritos => {
-      this.registros = favoritos;
-      
+      this.registros = favoritos; 
     })
-  }
-
-  openArbol(seleccion:string){
-    this.router.navigate(['/descripcion', arbol]);
   }
 
 }
